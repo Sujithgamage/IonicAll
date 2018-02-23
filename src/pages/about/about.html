@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align:center">
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="body">
+
+  <h1 class="name">Name : Sujith Gamage </h1><br />
+
+  <h2 *ngFor="let name of nameof">Study at : Wayamba University of Sri Lanka
+   {{ name }}
+  </h2>
+  <ion-item>
+    <ion-label style="color:blue">District</ion-label>
+    <ion-input placeholder="Enter District" [(ngModel)]="distr"></ion-input>
+
+  </ion-item><br />
+  <button ion-button (click)="addItem( distr )" color="dark">Add</button>
+  <button ion-button (click)="removeItem( distr.$key)" color="dark">Delete</button>
+  <ion-item *ngFor="let item of items">
+    {{ item }}
+  </ion-item>
+
+
+</ion-content>

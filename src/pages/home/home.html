@@ -1,0 +1,51 @@
+<ion-header class="bar-dark">
+  <ion-navbar>
+    <ion-title style="text-align:center" >Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <h2 style="color:blue; text-align-last:center">Welcome to stayHere</h2>
+  <ion-slides pager>
+
+    <ion-slide class="background">
+      <h3 >Rent House</h3>
+      <div style="width:150px; align-items:center">
+        <ion-list>
+          <ion-item >
+
+            <ion-label >District</ion-label>
+            <ion-select [(ngModel)]="gaming">
+              <ion-option value="Ampara">Ampara</ion-option>
+              <ion-option value="Anuradhapura">Anuradhapura</ion-option>
+              <ion-option value="Badulla">Badulla</ion-option>
+              <ion-option value="Batticaloa">Batticaloa</ion-option>
+              <ion-option value="Colombo">Colombo</ion-option>
+              <ion-option value="Galle">Galle</ion-option>
+            </ion-select>
+
+
+          </ion-item>
+        </ion-list>
+        <h3 style="text-align:center; color:firebrick">{{gaming}}</h3>
+        <button ion-button color="light" (click)="load()" round>Done</button>
+      </div>
+      
+    </ion-slide>
+
+    <ion-slide style="background-color:mediumspringgreen">
+      <ion-searchbar [(ngModel)]="serching" ></ion-searchbar>
+      
+      <h2>{{serching}}</h2>
+    </ion-slide>
+
+    <ion-slide style="background-color:tomato">
+     <ion-item>
+  <ion-label>Date</ion-label>
+  <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="myDate"></ion-datetime>
+</ion-item>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

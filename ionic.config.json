@@ -1,0 +1,8 @@
+{
+  "name": "Anonymouse",
+  "app_id": "9b511819",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
